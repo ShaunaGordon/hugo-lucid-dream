@@ -1,5 +1,6 @@
 ---
 title: {{ replace .TranslationBaseName "-" " " | title }}
+subtitle: {{ subtitle }}
 date: {{ .Date }}
 lastmod: {{ .Date }}
 cover: "/images/default1.jpg"
