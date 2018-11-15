@@ -3,7 +3,12 @@
 <article class="blog-card none flexbox" style="background-image: url({{ $cover }})">
 <img class="image" src="{{ $cover }}"></img>
 <div class="title-content twemoji">
-	<h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
+	<h3><a class="title" href={{ .Permalink }}>{{ .Title }} 
+		{{ if .Params.subtitle }}
+			<div class="sub title">{{ .Params.subtitle | emojify  | markdownify }}</div>
+			{{ end }}
+		</a>
+	</h3>
 	<div class="intro twemoji">{{ if .Params.description }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
 </div>
 <div class="utility-info">

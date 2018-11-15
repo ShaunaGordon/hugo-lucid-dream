@@ -15,7 +15,10 @@
 	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
 		<section class="ui secondary top attached black segment post-head">
 			<h1 class="post-title">
-				{{ .Title }} <span class="sub header">{{ .Params.Subtitle }}</span>
+				{{ .Title }} 
+				{{ if .Params.Subtitle }}
+					<span class="sub title">{{ .Params.subtitle | emojify  | markdownify }}</span>
+				{{ end }}
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>
@@ -36,7 +39,7 @@
 		</section>
 		<section class="ui secondary attached segment dream-tags">
 			{{- if isset .Params "tags" -}}
-				{{- partial "tags.html" . -}}
+				{{- partial "postTags.html" . -}}
 			{{ else }}
 			<span>{{ i18n "noTag" }}</span>
 			{{ end }}

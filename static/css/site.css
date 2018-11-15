@@ -813,6 +813,10 @@ p > img:not(.emoji), li > img {
   transition: 0.4s;
 }
 
+.blog-card .sub.title {
+  font: 400 1rem 'Abril Fatface';
+}
+
 .blog-card .title:hover {
   text-shadow: 0 8px 20px rgba(0, 0, 0, 0.95);
 }
