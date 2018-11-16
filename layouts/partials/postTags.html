@@ -1,0 +1,5 @@
+{{ $colors := slice "red" "orange" "yellow" "olive" "green" "teal" "blue" "violet" "purple" "pink" "brown" }}
+
+{{ range $name := .Params.tags }}
+    <a class="ui label {{ index (shuffle $colors) 0 }} " href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
+{{ end }}

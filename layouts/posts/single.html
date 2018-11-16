@@ -39,7 +39,7 @@
 		</section>
 		<section class="ui secondary attached segment dream-tags">
 			{{- if isset .Params "tags" -}}
-				{{- partial "tags.html" . -}}
+				{{- partial "postTags.html" . -}}
 			{{ else }}
 			<span>{{ i18n "noTag" }}</span>
 			{{ end }}
