@@ -1,6 +1,6 @@
 {{/*Title*/}}
 {{ define "title" }}
-	{{ .Title }}
+	{{ .Title }} <span class="sub header">{{ .Params.Subtitle }}</span>
 {{ end }}
 
 {{/*Content*/}}
@@ -37,7 +37,7 @@
 
 				<article class="post-content twemoji">
 					{{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="anchor" href="#${2}"><i class="small linkify icon"></i></a> ${3}` | safeHTML }}
-				</article>				
+				</article>
 			</section>
 
 			{{/*Tags*/}}
@@ -58,7 +58,7 @@
 
 			{{/*Licensing*/}}
 			{{ $license := lower .Params.license }}
-			{{ with $license }}					
+			{{ with $license }}
 				<section class="ui secondary attached segment copyright">
 					{{ partial "license.html" (dict "license" $license ) }}
 				</section>
