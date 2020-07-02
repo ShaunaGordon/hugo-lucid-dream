@@ -2,7 +2,7 @@
 	{{/*Category title*/}}
 	<div class="title">
 		<i class="dropdown icon"></i>
-		<a class="link" href="{{- "/categories/" | relLangURL -}}{{- $name | urlize -}}">{{- $name -}}</a>
+		<a class="link" href="{{- "/categories/" | relLangURL -}}{{- $name | urlize -}}">{{- $name | humanize -}}</a>
 	</div>
 
 	{{/*Category articles*/}}

@@ -35,12 +35,16 @@ other = "All Cards"
 other = "No tag"
 
 [tag]
-one = "All Tags"
+one = "Tags"
 other = "Tag"
 
 [category]
-one = "All Categories"
+one = "Categories"
 other = "Category"
+
+[series]
+one = "Series"
+other = "Series"
 
 [article]
 one = "1 article"
