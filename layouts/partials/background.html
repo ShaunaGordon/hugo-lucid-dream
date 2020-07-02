@@ -5,6 +5,7 @@ var bodyBgSwitchIndex = 0;
 {{ $bgColor := $.Site.Params.background.color }}
 {{ $bgImages := $.Site.Params.background.images }}
 {{ $bgBlur := $.Site.Params.background.blur }}
+{{ $bgGradients := $.Site.Params.background.gradients }}
 
 {{ with $bgImages }}
 	{{ if gt (len $bgImages) 1 }}
@@ -12,29 +13,39 @@ var bodyBgSwitchIndex = 0;
 		var randomNumber = getRandomInt(0, images.length);
 		var bgImage = "url(" + images[randomNumber] + ")";
 	{{ else }}
-		var bgImage = "url(" + {{ index $bgImages 0 }} + ")";	
+		var bgImage = "url(" + {{ index $bgImages 0 }} + ")";
 	{{ end }}
 		console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
 		document.body.style.setProperty('--blurEff', {{ $bgBlur }});
-		document.body.style.backgroundImage = bgImage;	
+		document.body.style.backgroundImage = bgImage;
 {{ else }}
-	{{ with $bgColor }}
-		document.body.style.backgroundColor = {{ $bgColor }};
-	{{ else }}
-		var gradients = [
-		  [],
-		  ['#40e0d0', '#ff8c00', '#ff0080'], // Wedding Day Blues
-		  ['#3e5151', '#decba4'], // Sand to Blue
-		  ['#11998e', '#38ef7d'], // Quepal
-		  ['#108dc7', '#ef8e38'], // Pun Yeta
-		  ['#fc5c7d', '#6a82fb'], // Sublime Light
-		  ['#fc466b', '#3f5efb'], // Sublime Vivid
-		  ['#c94b4b', '#4b134f'], // Bighead
-		  ['#23074d', '#cc5333'] // Taran Tado
-		];
-		var randomBgColor = gradients[getRandomInt(0, gradients.length)].join(", ");
-		var backgroundProperty = 'linear-gradient(to right, ' + randomBgColor + ')';
-		document.body.style.background = backgroundProperty;
+    {{ with $bgGradients }}
+        var gradients = [[], ...{{ $bgGradients }} ];
+        var color = gradients[1];
+        if(gradients.length > 1) {
+            color = gradients[getRandomInt(0, gradients.length)].join(", ");
+        }
+        var backgroundProperty = 'linear-gradient(to right, ' + color + ')';
+        document.body.style.background = backgroundProperty;
+    {{ else }}
+    	{{ with $bgColor }}
+    		document.body.style.backgroundColor = {{ $bgColor }};
+    	{{ else }}
+    		var gradients = [
+    		  [],
+    		  ['#40e0d0', '#ff8c00', '#ff0080'], // Wedding Day Blues
+    		  ['#3e5151', '#decba4'], // Sand to Blue
+    		  ['#11998e', '#38ef7d'], // Quepal
+    		  ['#108dc7', '#ef8e38'], // Pun Yeta
+    		  ['#fc5c7d', '#6a82fb'], // Sublime Light
+    		  ['#fc466b', '#3f5efb'], // Sublime Vivid
+    		  ['#c94b4b', '#4b134f'], // Bighead
+    		  ['#23074d', '#cc5333'] // Taran Tado
+    		];
+    		var randomBgColor = gradients[getRandomInt(0, gradients.length)].join(", ");
+    		var backgroundProperty = 'linear-gradient(to right, ' + randomBgColor + ')';
+    		document.body.style.background = backgroundProperty;
+        {{ end }}
 	{{ end }}
 {{ end }}
 
