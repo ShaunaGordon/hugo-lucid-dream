@@ -40,6 +40,15 @@
     	</div>
 	{{ end }}
 
+	{{/*Series section button*/}}
+	{{ if and (ne .context.Data.Plural "series") .context.Site.Params.series.enabled }}
+		<div class="item">
+			<a href="/series">
+				<i class="inverted big link newspaper outline icon" title="{{ i18n `series` 1 }}"></i>
+			</a>
+    	</div>
+	{{ end }}
+
 	{{/*Navigation buttons*/}}
 	{{ if or .context.IsHome (eq .context.Kind "taxonomyTerm") }}
 		{{ $paginator := .context.Paginate (where .context.Site.RegularPages "Section" .contentType) }}
