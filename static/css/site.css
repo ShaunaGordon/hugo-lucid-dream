@@ -118,6 +118,10 @@
 
 /*Site settings*/
 
+html, body {
+    font-size: 16px;
+}
+
 body,
 body.pushable {
     background-repeat: no-repeat;
@@ -821,6 +825,8 @@ li>img {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .card.title-content {
