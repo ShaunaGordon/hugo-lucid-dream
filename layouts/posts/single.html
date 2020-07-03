@@ -1,6 +1,6 @@
 {{/*Title*/}}
 {{ define "title" }}
-	{{ .Title }} <span class="sub header">{{ .Params.Subtitle }}</span>
+	{{ .Title }} -- {{ .Params.Subtitle }}
 {{ end }}
 
 {{/*Content*/}}
@@ -17,7 +17,7 @@
 			{{/*Article*/}}
 			<section class="ui secondary top attached black segment post-head">
 				<h1 class="post-title">
-					{{ .Title }}
+					{{ .Title }} <span class="sub header">{{ .Params.Subtitle }}</span>
 				</h1>
 
 				<div class="sub header">
