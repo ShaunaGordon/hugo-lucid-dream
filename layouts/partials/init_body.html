@@ -13,8 +13,8 @@
 {{ end }}
 
 {{/*Goatcounter Analytics*/}}
-{{ with $.Site.Goatcounter }}
+{{ with $.Site.Params.goatcounter }}
 	<!-- Goatcounter Analytics -->
-	<script data-goatcounter="https://{{ if $.Site.Goatcounter }}{{ $.Site.Goatcounter }}{{ end }}.goatcounter.com/count"
+	<script data-goatcounter='https://{{ if $.Site.Params.goatcounter }}{{ $.Site.Params.goatcounter }}{{ end }}.goatcounter.com/count'
         async src="//gc.zgo.at/count.js"></script>
 {{ end }}
