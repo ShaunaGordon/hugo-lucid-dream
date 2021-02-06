@@ -11,3 +11,10 @@
 	</script>
 	<script async src='https://www.google-analytics.com/analytics.js'></script>
 {{ end }}
+
+{{/*Goatcounter Analytics*/}}
+{{ with $.Site.Goatcounter }}
+	<!-- Goatcounter Analytics -->
+	<script data-goatcounter="https://{{ if $.Site.Goatcounter }}{{ $.Site.Goatcounter }}{{ end }}.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{{ end }}
