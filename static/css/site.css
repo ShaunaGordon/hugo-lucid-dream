@@ -21,12 +21,6 @@
 
 /*Computer view*/
 
-@media screen and (min-width: 991px) {
-    .blog-card {
-        width: calc(50% - 1rem);
-    }
-}
-
 @media screen and (max-width: 300px) {
     .title-content {
         top: 30px;
@@ -58,9 +52,6 @@
 /*Tablet view*/
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    .blog-card {
-        width: calc(50% - 1rem);
-    }
     .pusher::-webkit-scrollbar {
         width: 2vw;
     }
@@ -69,11 +60,6 @@
 /*Mobile view*/
 
 @media screen and (max-width: 767px) {
-    .blog-card {
-        width: calc(100% - 2rem);
-        margin-right: auto !important;
-        margin-left: auto !important;
-    }
     .pusher::-webkit-scrollbar {
         width: 5px !important;
     }
@@ -787,102 +773,6 @@ li>img {
 
 /*Card settings*/
 
-.blog-card {
-    position: relative;
-    margin-bottom: 1rem;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-    float: none;
-    color: #fff;
-    transition: 0.4s;
-    background: white;
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
-    z-index: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.blog-card:hover {
-    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 1);
-    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
-}
-
-.blog-card .image {
-  width: 100%;
-  height: 100%;
-}
-
-.title-content {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 2rem;
-    text-align: center;
-    z-index: 2;
-    width: 100%;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.card.title-content {
-    opacity: 0;
-    bottom: 0;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
-}
-
-.blog-card:hover .card.title-content {
-    opacity: 1;
-    bottom: 0;
-}
-
-.blog-card:hover .title-content {
-    bottom: 5rem;
-}
-
-.blog-card .title {
-  color: #fff;
-  font: 400 2rem 'Abril Fatface', cursive;
-  letter-spacing: 1px;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.blog-card .sub.title {
-    font: 400 1rem 'Abril Fatface';
-}
-
-.blog-card .title:hover {
-    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.95);
-}
-
-.blog-card h3:after {
-    content: " ";
-    display: block;
-    width: 10%;
-    height: 0.2rem;
-    margin: 0.5em auto;
-    border: 0;
-    z-index: 2;
-    background: #BDA26B;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-}
-
-.blog-card:hover h3:after {
-    animation: changeLetter 0.3s 1 linear;
-    width: 80%;
-}
-
 @keyframes changeLetter {
     0% {
         width: 10%;
@@ -905,10 +795,6 @@ li>img {
     z-index: 2;
 }
 
-.blog-card:hover .intro {
-    opacity: 1;
-}
-
 .utility-info {
     position: absolute;
     height: auto;
@@ -922,28 +808,25 @@ li>img {
     -o-transition: 0.4s;
     transition: 0.4s;
     background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.1) 21%);
+
+    span {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
 }
 
-.blog-card:hover .utility-info {
-    background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%);
-}
-
-.utility-info span {
-    font-size: 1rem;
-    white-space: nowrap;
-}
-
-.utility-list div:not(:last-child) {
-    margin-right: 1em;
-}
-
-.utility-list div {
-    display: inline-block;
-}
-
-.utility-list {
-    list-style-type: none;
-    padding: 0;
+.title-content {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .color-overlay {
@@ -957,12 +840,124 @@ li>img {
     transition: background 0.4s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
-.card.color-overlay {
-    background: rgba(0, 0, 0, 0);
+.card {
+    &.title-content {
+        opacity: 0;
+        bottom: 0;
+        -webkit-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+    }
+
+    &.color-overlay {
+        background: rgba(0, 0, 0, 0);
+    }
 }
 
-.blog-card:hover .color-overlay {
-  background: rgba(0, 0, 0, 0.6);
+.blog-card {
+    position: relative;
+    margin-bottom: 1rem;
+    width: calc(100% - 2rem);
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    color: #fff;
+    transition: 0.4s;
+    background: white;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        width: calc(50% - 2rem);
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    &:hover {
+        -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 1);
+        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+
+        h3:after {
+            animation: changeLetter 0.3s 1 linear;
+            width: 80%;
+        }
+
+        .title-content {
+            bottom: 5rem;
+        }
+
+        .card.title-content {
+            opacity: 1;
+            bottom: 0;
+        }
+
+        .intro {
+            opacity: 1;
+        }
+
+        .utility-info {
+            background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%);
+        }
+
+        .color-overlay {
+            background: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    h3:after {
+        content: " ";
+        display: block;
+        width: 10%;
+        height: 0.2rem;
+        margin: 0.5em auto;
+        border: 0;
+        z-index: 2;
+        background: #BDA26B;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+
+    .title {
+        color: #fff;
+        font: 400 2rem 'Abril Fatface', cursive;
+        letter-spacing: 1px;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+
+        &:hover {
+            text-shadow: 0 8px 20px rgba(0, 0, 0, 0.95);
+        }
+      }
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+
+    .sub.title {
+        font: 400 1rem 'Abril Fatface';
+    }
+}
+
+.utility-list {
+    list-style-type: none;
+    padding: 0;
+
+    div {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+    }
 }
 
 .license.statement {
