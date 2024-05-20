@@ -715,7 +715,6 @@ li>img {
     opacity: 0;
     transition: 0.4s;
     z-index: 2;
-    display: none;
 }
 
 .utility-info {
@@ -805,7 +804,7 @@ li>img {
         }
 
         .title-content {
-            bottom: 5rem;
+            bottom: 2rem;
         }
 
         .card.title-content {
