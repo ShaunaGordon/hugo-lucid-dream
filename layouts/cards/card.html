@@ -19,7 +19,9 @@
 {{ $cover := $.Scratch.Get "cover" }}
 
 {{/*Card*/}}
-<article class="blog-card none flexbox" style="background-image: url('{{ $cover }}')">
+<article class="blog-card none flexbox">
+	<img class="image" src="{{ $cover }}"></img>
+
 	<div class="card title-content twemoji">
 		<h3><a class="title" href="{{ .Params.link }}">{{ .Title }}</a></h3>
 
