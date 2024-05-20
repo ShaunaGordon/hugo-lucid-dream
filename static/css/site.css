@@ -716,10 +716,6 @@ li>img {
     transition: 0.4s;
     z-index: 2;
     display: none;
-
-    @media screen and (min-width: 300px) {
-        display: block;
-    }
 }
 
 .utility-info {
