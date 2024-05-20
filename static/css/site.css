@@ -789,7 +789,7 @@ li>img {
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1386px) {
         width: calc(50% - 2rem);
         margin-right: 0.5rem;
         margin-left: 0.5rem;
@@ -804,7 +804,7 @@ li>img {
         }
 
         .title-content {
-            bottom: 2rem;
+            bottom: 5rem;
         }
 
         .card.title-content {
