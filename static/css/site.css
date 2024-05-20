@@ -713,6 +713,8 @@ li>img {
     opacity: 0;
     transition: 0.4s;
     z-index: 2;
+    max-height: 6rem;
+    height: 0;
 }
 
 .utility-info {
@@ -735,7 +737,7 @@ li>img {
 
 .title-content {
     position: absolute;
-    bottom: 0;
+    bottom: 1rem;
     margin-bottom: 2rem;
     text-align: center;
     z-index: 2;
@@ -774,11 +776,11 @@ li>img {
 
 .blog-card {
     position: relative;
-    margin-bottom: 1rem;
     width: calc(100% - 2rem);
+    margin-bottom: 1rem;
     margin-right: auto;
     margin-left: auto;
-    float: none;
+    overflow: hidden;
     color: #fff;
     transition: 0.4s;
     background: white;
@@ -802,7 +804,7 @@ li>img {
         }
 
         .title-content {
-            bottom: 5rem;
+            bottom: 6rem;
         }
 
         .card.title-content {
