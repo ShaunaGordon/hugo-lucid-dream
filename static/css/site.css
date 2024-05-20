@@ -283,8 +283,6 @@ ul>li {
     overflow: hidden;
 
     .cards {
-        margin-right: -1rem;
-        margin-left: -1rem;
         flex-wrap: wrap;
     }
 }
