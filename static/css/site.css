@@ -1,3 +1,63 @@
+:root {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --tocBg: #ffffff15;
+        --blockquoteBg: #f9f9f9;
+        --codeBg: #c0c9c833;
+        --preBg: #ffffff70;
+        --boxShadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+        --cardBoxShadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
+        --avatarShadow: 0 0 0 0.1em #fff, 0 0 0 0.4rem #eee;
+        --textShadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        --textShadowHover: 0 8px 20px rgba(0, 0, 0, 0.95);
+        --shareText: #3e3e3e;
+        --sidebarLinkText: #ffffffd6;
+        --sidebarLinkHover: #ffffff;
+        --tagItemHover: rgba(255, 255, 255, 0.18);
+        --introText: #ddd;
+        --utilityGradient: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%);
+        --colorOverlay: rgba(0, 0, 0, 0.6);
+        --cardBar: #917d7d;
+        --postBg: #21252e;
+        --uiText: #b9bac0;
+        --aboutBg: #21252e;
+        --linkText: #6aa3db;
+        --blogCardText: #cdced3;
+        --red: #924848;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --tocBg: #ffffff70;
+        --blockquoteBg: #f9f9f9;
+        --codeBg: #c0c9c833;
+        --preBg: #ffffff70;
+        --boxShadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+        --cardBoxShadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
+        --avatarShadow: 0 0 0 0.1em #fff, 0 0 0 0.4rem #eee;
+        --textShadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        --textShadowHover: 0 8px 20px rgba(0, 0, 0, 0.95);
+        --shareText: #3e3e3e;
+        --sidebarLinkText: #ffffffd6;
+        --sidebarLinkHover: #ffffff;
+        --tagItemHover: rgba(255, 255, 255, 0.18);
+        --introText: #ddd;
+        --utilityGradient: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%);
+        --colorOverlay: rgba(0, 0, 0, 0.6);
+        --cardBar: #BDA26B;
+        --postBg: #ececece8;
+        --uiText: #000;
+        --aboutBg: #1b1c1ded;
+        --linkText: #4183c4;
+        --blogCardText: #ffffff;
+        --red: #db2828;
+    }
+}
+
 /*Fonts*/
 @font-face {
     font-family: 'Abril Fatface';
@@ -57,6 +117,10 @@ body.pushable {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover !important;
+}
+
+a {
+    color: var(--linkText);
 }
 
 .anchor {
@@ -164,17 +228,16 @@ li:not('.toc') {
             background-color: rgba(255, 255, 255, 0.6);
         }
 
-        .ui.inverted.segment {
-            background-color: #1b1c1ded;
-        }
+
 
     }
 }
 
 .ui {
     &.secondary.segment {
-        background-color: #ececece8;
+        background-color: var(--postBg);
         padding: auto 1.5em 0 1.5em;
+        color: var(--uiText);
     }
 
     &.grid {
@@ -185,6 +248,10 @@ li:not('.toc') {
     &.label {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+    }
+
+    &.inverted.segment {
+        background-color: var(--aboutBg);
     }
 }
 
@@ -231,7 +298,7 @@ ul>li {
 /*Post settings*/
 
 .post-title {
-    color: black;
+    color: var(--uiText);
     font: bold 3rem 'Source Sans Pro';
     margin-bottom: 1px;
 
@@ -270,7 +337,7 @@ ul>li {
 .toc {
     font-size: 1.1rem;
     line-height: 1rem;
-    background-color: #ffffff70;
+    background-color: var(--tocBg);
     border: 1px solid #8a8a8a6b;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -304,7 +371,7 @@ ul>li {
     }
 
     blockquote {
-        background: #f9f9f9;
+        background: val(--blockquoteBg);
         border-left: 8px solid #ccc;
         padding: 0.4em 0.8em;
         margin: 0.5em 0 0.5em 0;
@@ -316,15 +383,14 @@ ul>li {
 
     code {
         font-size: 0.8em;
-        background-color: #c0c9c833;
+        background-color: val(--codeBg);
         padding: 0 0.2em;
         border: 1px solid #929696;
         border-radius: 0.2em;
     }
 
     pre {
-        background: #ffffff70;
-        background-color: #ffffff70;
+        background: var(--preBg);
         border: 1px solid #8a8a8a6b;
         border-radius: 5px;
         overflow-x: auto;
@@ -347,7 +413,7 @@ ul>li {
 
 p>img:not(.emoji),
 li>img {
-    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+    box-shadow: var(--boxShadow);
     margin: 1em auto 1em auto;
 }
 
@@ -364,7 +430,7 @@ li>img {
         margin: auto auto 1em auto;
         width: 80%;
         padding-bottom: 45%;
-        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+        box-shadow: var(--boxShadow);
 
         .youtube {
             position: absolute;
@@ -428,7 +494,7 @@ li>img {
     .name {
         margin-bottom: 1px;
         display: block;
-        color: #3e3e3e;
+        color: val(--shareText);
         font: bold 1.2em 'Lato';
         transition: 1s;
 
@@ -439,7 +505,7 @@ li>img {
 
     .desc {
         display: block;
-        color: #3e3e3e;
+        color: val(--shareText);
         font-size: 0.9em;
     }
 
@@ -455,7 +521,7 @@ li>img {
     width: 5em;
     margin: auto;
     border-radius: 50%;
-    box-shadow: 0 0 0 0.1em #fff, 0 0 0 0.4rem #eee;
+    box-shadow: var(--avatarShadow);
 }
 
 .info {
@@ -570,16 +636,16 @@ li>img {
     }
 
     .link {
-        color: #ffffffd6;
+        color: var(--sidebarLinkText);
 
         &:hover {
-            color: white;
+            color: var(--sidebarLinkHover);
         }
     }
 }
 
 #author .sub.header {
-    color: #fff;
+    color: var(--sidebarLinkHover);
 }
 
 /*Header*/
@@ -608,6 +674,11 @@ li>img {
 
 #tag-category-pop {
     margin-right: -1px;
+
+    &.ui.red.label {
+        border-color: var(--red) !important;
+        color: var(--uiText) !important;
+    }
 }
 
 .hand.point.icon {
@@ -631,14 +702,14 @@ li>img {
 
     div {
         a {
-            color: white;
+            color: var(--sidebarLinkText);
         }
 
         .link {
-            color: #ffffffd6;
+            color: var(--sidebarLinkText);
 
             &:hover {
-                color: white;
+                color: var(--sidebarLinkHover);
             }
         }
     }
@@ -662,7 +733,7 @@ li>img {
             transition: 0.5s;
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.18);
+                background-color: var(--tagItemHover);
             }
         }
     }
@@ -709,7 +780,7 @@ li>img {
     font: 200 1.2rem 'Droid Serif Italic';
     line-height: 1.2rem;
     width: 80%;
-    color: #ddd;
+    color: var(--introText);
     opacity: 0;
     transition: 0.4s;
     z-index: 2;
@@ -781,10 +852,10 @@ li>img {
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
-    color: #fff;
+    color: var(--blogCardText);
     transition: 0.4s;
-    background: white;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
+    background: var(--sidebarLinkHover);
+    box-shadow: var(--cardBoxShadow);
     z-index: 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -796,7 +867,7 @@ li>img {
     }
 
     &:hover {
-        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+        box-shadow: var(--boxShadow);
 
         h3:after {
             animation: changeLetter 0.3s 1 linear;
@@ -817,11 +888,11 @@ li>img {
         }
 
         .utility-info {
-            background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%);
+            background: var(--utilityGradient);
         }
 
         .color-overlay {
-            background: rgba(0, 0, 0, 0.6);
+            background: var(--colorOverlay);
         }
     }
 
@@ -833,19 +904,19 @@ li>img {
         margin: 0.5em auto;
         border: 0;
         z-index: 2;
-        background: #BDA26B;
+        background: var(--cardBar);
         transition: all 0.4s;
     }
 
     .title {
-        color: #fff;
+        color: var(--blogCardText);
         font: 400 2rem 'Abril Fatface', cursive;
         letter-spacing: 1px;
-        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: var(--textShadow);
         transition: 0.4s;
 
         &:hover {
-            text-shadow: 0 8px 20px rgba(0, 0, 0, 0.95);
+            text-shadow: var(--textShadowHover);
         }
       }
 
