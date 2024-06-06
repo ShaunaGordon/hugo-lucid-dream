@@ -7,26 +7,19 @@
 	{{ end }}
 
 	{{/*slices to loop over*/}}
-	{{ $sites := slice "GitHub" "Email" "Twitter" "YouTube" "Medium" "LinkedIn" "Stack Overflow" "CodePen" "Reddit" "GitLab" "Resume" }}
-	{{ $links := slice "https://github.com/" "mailto:" "https://twitter.com/" "https://youtube.com/user/" "https://medium.com/@" "https://www.linkedin.com/in/" "https://www.stackoverflow.com/users/" "https://codepen.io/" "https://reddit.com/user/" "https://gitlab.com/" "" }}
-	{{ $icons := slice "github" "mail" "twitter" "youtube play" "medium" "linkedin" "stack overflow" "codepen" "reddit" "gitlab" "file alternate" }}
+	{{ $sites := slice "GitHub" "Email" "Twitter" "YouTube" "Medium" "LinkedIn" "Stack Overflow" "CodePen" "Reddit" "GitLab" "Resume" "Support My Work" "Buy Me Coffee" }}
+	{{ $links := slice "https://github.com/" "mailto:" "https://twitter.com/" "https://youtube.com/user/" "https://medium.com/@" "https://www.linkedin.com/in/" "https://www.stackoverflow.com/users/" "https://codepen.io/" "https://reddit.com/user/" "https://gitlab.com/" "" "" "" }}
+	{{ $icons := slice "github" "mail" "twitter" "youtube play" "medium" "linkedin" "stack overflow" "codepen" "reddit" "gitlab" "file alternate" "coffee" "coffee" }}
 
 	{{/*Generate HTML for each site*/}}
 	{{ range $index, $val := $sites }}
 		{{ $var := replace $val " " "" | lower }}
 		{{ with ($.Scratch.Get $var) }}
 			<div class="item">
-				<a href="{{ index $links $index }}{{ $.Scratch.Get $var }}" rel="me" {{ if ne $var "mail" }}target="	_blank"{{ end }}>
+				<a href="{{ index $links $index }}{{ $.Scratch.Get $var }}" rel="me" {{ if and (ne $var "email") (not (strings.HasPrefix ($.Scratch.Get $var) "#")) }}target="_blank"{{ end }}>
 					<i id="ico" class="inverted big link {{ index $icons $index }} icon" title="{{ $val }}"></i>
 				</a>
 			</div>
 		{{ end }}
 	{{ end }}
-
-	{{/*Buy me Coffee*/}}
- 	<div class="item">
-		<a href="#buy-me-coffee">
-			<i class="inverted big link coffee icon" title="Support My Work"></i>
-		</a>
-	</div>
 </nav>
