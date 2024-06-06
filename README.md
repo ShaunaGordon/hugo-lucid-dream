@@ -4,7 +4,9 @@
 [![Cards View Demo](https://api.netlify.com/api/v1/badges/8588f660-afc1-4446-8db4-9dc5d87c4c79/deploy-status)](https://app.netlify.com/sites/dream-plus-cards/deploys) -->
 
 ![Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus/blob/master/images/screenshot.png)
-This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung) and contains tons of new features such as:
+This theme is an upgraded version of the [Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus), which was itself upgraded from the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung).
+
+Features Utkarsh's Dream Plus included:
 
 * "Cards" and "Posts" views for the home page
 * twemoji rendering
@@ -24,6 +26,15 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * Custom CSS and JS can be used without modifying the theme
 * More social icons
 * Shorte.st website script, and a lot of other minor improvements
+
+In this version:
+
+* Theme is now a Hugo/Go module
+* Automatic light and dark mode
+* A number of under-the-hood updates, including modernizing the CSS and updating JS
+* Subtitle support, visible on both the cards and the post view
+* Series support
+* Add Gitlab and arbitrary file links
 
 This theme can be used for two purposes:
 
@@ -55,10 +66,22 @@ This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_COND
 ---
 
 ## Installation
+
+### Recommended
+
+The theme can be added as a module by adding the following to the `[module]` section of your **hugo.toml** file.
+
+```toml
+[[module.imports]]
+	path = "github.com/ShaunaGordon/hugo-dream-plus"
+```
+
+### Legacy (Hugo < 0.55.0, Go < 1.11)
+
 The theme can be installed by running the following commands inside your **Hugo website** folder.
 ```shell
 cd themes
-git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus
+git submodule add https://github.com/ShaunaGordon/hugo-dream-plus dream-plus
 git submodule update --init --recursive
 ```
 
@@ -96,11 +119,14 @@ After that, fill up the social variables at the end of the config file. This the
 | StackOverflow | *stackoverflow* | `stackoverflow = "number/username"` |
 | CodePen | *codepen* | `codepen = "username"` |
 | Reddit | *reddit* | `reddit = "username"` |
+| Resume | *resume* | `resume = "//resume.example.com"` |
+| Support My Work | *supportmywork* | `supportmywork = "#support-me"` |
+| Buy Me Coffee | *buymecoffee* | `buymecoffee = "#coffee"` |
 
 These variables have to be in the `[social]` table of `config.toml` or its equivalent for `YAML` or `JSON`.
 ```toml
 [social]
-	github = "UtkarshVerma"
+	github = "ShaunaGordon"
 ```
 
 Once this is done, write up the "**About Me**" section of your website in Markdown as directed here: [Error and About Pages](https://github.com/UtkarshVerma/hugo-dream-plus#error-and-about-pages).
@@ -114,14 +140,14 @@ Therefore:
 > The `contentType` variable has now been deprecated.
 
 One clear distinction between both the view is that **Card** view doesn't support posts, instead it redirects to the specified link, while **Post** view does.
-You may test them out yourselves by visiting my sites(stated above) which use them.
+You may test them out yourselves by visiting my sites (stated above) which use them.
 Also, post/card creation is done differently for both the views. It is as follows:
 ```shell
 hugo new cards/example.md		#Card creation
 hugo new posts/example.md		#Post creation
 ```
 
-After this, just open your MarkDown card/post and provide the parameters for the card/post.
+After this, just open your Markdown card/post and provide the parameters for the card/post.
 
 ### The background
 There are two different ways to configure the background of this theme. These settings are mutually exclusive to each other.

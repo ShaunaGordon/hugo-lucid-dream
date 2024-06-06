@@ -1,10 +1,7 @@
 baseURL = "https://dream-plus-posts.netlify.com"
-title = "UtkarshVerma's Blog"
-theme = "dream-plus"
-themesDir = "../.."		#Don't use this, only for exampleSite
+title = "ShaunaGordon's Blog"
 paginate = 4
 enableRobotsTXT = true
-disqusShortname = "dream-plus"
 
 #Skip building these files
 ignoreFiles = ["content/404.md", "content/about.md", "content/cards/\\.*"]
@@ -17,6 +14,10 @@ pygmentsOptions = "linenos=table"
 #Enable Hugo Emoji Conversion
 enableEmoji=true
 
+[module]
+	[[module.imports]]
+		path = "github.com/ShaunaGordon/hugo-dream-plus"
+
 [params]
 	#Favicon for site
 	favicon = "/img/defaultFav.ico"
@@ -27,7 +28,7 @@ enableEmoji=true
 	siteStartYear = 2018
 
 	[params.author]
-		name = "Utkarsh Verma"
+		name = "Shauna Gordon"
 		description = "Just a random blog for random stuff, mostly tech-related."
 		avatar = "https://raw.githubusercontent.com/UtkarshVerma/utkarshverma.github.io/source/static/images/avatar.jpg"
 		motto = "A keen maker, programmer and an Instructables author."
@@ -50,9 +51,33 @@ enableEmoji=true
 	[params.categories]
 		enabled = true
 
+	#Series settings
+	[params.series]
+		enabled = true
+
+[taxonomies]
+	category = "categories"
+	tag = "tags"
+	series = "series"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
 [social]
-	email = "utkarshverma@pm.me"
-	github = "UtkarshVerma"
-	stackoverflow = "9271608/utkarsh-verma"
-	medium = "UtkarshVerma_"
-	twitter = "UtkarshVerma_"
+	email = "shauna@gordons.me"
+	github = "ShaunaGordon"
+	gitlab = "shauna"
+	resume = "//resume.shaunagordon.com"
+	buymecoffee = "//shaunagordon.com#buy-me-coffee"
+	# stackoverflow = ""
+	# medium = ""
+	# twitter = ""
+
+[services]
+	[services.disqus]
+		shortname = ""
+	[services.googleAnalytics]
+		id = ""

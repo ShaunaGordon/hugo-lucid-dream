@@ -3,7 +3,7 @@
 <article class="blog-card none flexbox" style="background-image: url({{ $cover }})">
 <img class="image" src="{{ $cover }}"></img>
 <div class="title-content twemoji">
-	<h3><a class="title" href={{ .Permalink }}>{{ .Title }} 
+	<h3><a class="title" href={{ .Permalink }}>{{ .Title }}
 		{{ if .Params.subtitle }}
 			<div class="sub title">{{ .Params.subtitle | emojify  | markdownify }}</div>
 			{{ end }}
@@ -13,7 +13,7 @@
 </div>
 <div class="utility-info">
 	<ul class="utility-list">
-		{{ if $.Site.DisqusShortname }}
+		{{ if $.Site.Config.Services.Disqus.Shortname }}
 			<div><i class="comment icon"></i><span class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></span></div>
 		{{ end }}
 		<div><span><i class="calendar icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>

@@ -39,7 +39,7 @@
 	{{/*Card info*/}}
 	<div class="utility-info">
 		<ul class="utility-list">
-			{{ if $.Site.DisqusShortname }}
+			{{ if $.Site.Config.Services.Disqus.Shortname }}
 				<div><i class="comment icon"></i><span class="disqus-comment-count" data-disqus-identifier="{{ .File.UniqueID }}"></span></div>
 			{{ end }}
 			<div><span><i class="calendar icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>

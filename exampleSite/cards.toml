@@ -1,7 +1,5 @@
 baseURL = "https://dream-plus-cards.netlify.com"
-title = "UtkarshVerma's Site"
-theme = "dream-plus"
-themesDir = "../.."		#Don't use this, only for exampleSite
+title = "ShaunaGordon's Site"
 paginate = 4
 enableRobotsTXT = true
 
@@ -10,6 +8,10 @@ ignoreFiles = ["content/404.md", "content/about.md", "content/posts/\\.*"]
 
 #Enable Hugo Emoji Conversion
 enableEmoji=true
+
+[module]
+	[[module.imports]]
+		path = "github.com/ShaunaGordon/hugo-dream-plus"
 
 [params]
 	#Favicon for site
@@ -21,7 +23,7 @@ enableEmoji=true
 	siteStartYear = 2018
 
 	[params.author]
-		name = "Utkarsh Verma"
+		name = "Shauna Gordon"
 		description = "Just a random blog for random stuff, mostly tech-related."
 		avatar = "https://raw.githubusercontent.com/UtkarshVerma/utkarshverma.github.io/source/static/images/avatar.jpg"
 		motto = "A keen maker, programmer and an Instructables author."
@@ -36,9 +38,41 @@ enableEmoji=true
 		#Use custom CSS
 		customCSS = ["https://cdn.rawgit.com/UtkarshVerma/hugo-dream-plus/ae11561d/exampleSite/static/css/highlight.css"]
 
+	#Tags settings
+	[params.tags]
+		enabled = true
+
+	#Categories settings
+	[params.categories]
+		enabled = true
+
+	#Series settings
+	[params.series]
+		enabled = true
+
+[taxonomies]
+	category = "categories"
+	tag = "tags"
+	series = "series"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
 [social]
-	email = "utkarshverma@pm.me"
-	github = "UtkarshVerma"
-	stackoverflow = "9271608/utkarsh-verma"
-	medium = "UtkarshVerma_"
-	twitter = "UtkarshVerma_"
+	email = "shauna@gordons.me"
+	github = "ShaunaGordon"
+	gitlab = "shauna"
+	resume = "//resume.shaunagordon.com"
+	buymecoffee = "//shaunagordon.com#buy-me-coffee"
+	# stackoverflow = ""
+	# medium = ""
+	# twitter = ""
+
+[services]
+	[services.disqus]
+		shortname = ""
+	[services.googleAnalytics]
+		id = ""
