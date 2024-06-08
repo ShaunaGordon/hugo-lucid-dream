@@ -29,7 +29,8 @@ Features Utkarsh's Dream Plus included:
 * RSS Button
 * Custom CSS and JS can be used without modifying the theme
 * More social icons
-* Shorte.st website script, and a lot of other minor improvements
+* ~~Shorte.st website script~~
+* a lot of other minor improvements
 
 In this version:
 
@@ -39,6 +40,7 @@ In this version:
 * Subtitle support, visible on both the cards and the post view
 * Series support
 * Add Gitlab and arbitrary file links
+* Site search! 🥳
 
 This theme can be used for two purposes:
 
@@ -213,15 +215,6 @@ You may also set a custom favicon for your website through the `favicon` config 
 ```
 [params]
 	favicon = "/images/defaultFav.ico"
-```
-
-### Shorte.st website script
-The [Shorte.st](https://shorte.st) website script has been implemented in this theme. To use it, you'll have to configure it through the `shortest` table under `params`.
-```toml
-[params.shortest]
-	enabled = true		#Enable shorte.st
-	apiToken = ""		#The API Token you received from shorte.st
-	domains = [""]		#The domains you want to define
 ```
 
 ### Some other configurations
