@@ -6,6 +6,8 @@
 	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 {{ end }}
 
+{{ partial "search.html" . }}
+
 {{/*Load custom JS*/}}
 {{ range $val := $.Site.Params.features.customJS }}
 	{{ if gt (len $val) 0 }}
