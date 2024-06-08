@@ -1,10 +1,14 @@
-# Dream Plus Theme for Hugo
+# Lucid Dream Theme for Hugo
 <!-- [![Build Status](https://travis-ci.org/UtkarshVerma/hugo-dream-plus.svg?branch=master)](https://travis-ci.org/UtkarshVerma/hugo-dream-plus)
 [![Posts View Demo](https://api.netlify.com/api/v1/badges/6ef6f16b-9f2b-4d4a-9c35-8ef5a28783df/deploy-status)](https://app.netlify.com/sites/dream-plus-posts/deploys)
 [![Cards View Demo](https://api.netlify.com/api/v1/badges/8588f660-afc1-4446-8db4-9dc5d87c4c79/deploy-status)](https://app.netlify.com/sites/dream-plus-cards/deploys) -->
 
+> [!IMPORTANT]
+> Hey folks! [Utkarsh dropped support](https://github.com/UtkarshVerma/hugo-dream-plus/issues/79) for this theme several years ago, but this is still by far my favorite theme for my blog. So I've taken to updating and revamping it. However, there's a *lot* to update and do to be able to get it back into the Hugo themes showcase, update all the decayed links, and to quit pointing to Utkarsh for support. It's still a work in progress, so please, pardon any inconsistencies or broken links, particularly in the documentation.
+
 ![Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus/blob/master/images/screenshot.png)
-This theme is an upgraded version of the [Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus), which was itself upgraded from the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung).
+
+This theme is a revamped, upgraded, and modernized version of [Utkarsh Verma's](https://github.com/UtkarshVerma) [Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus), which was itself upgraded from the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung) (which Yue has since *completely* redone to the point that it's no longer recognizably what this one came from).
 
 Features Utkarsh's Dream Plus included:
 
@@ -38,10 +42,10 @@ In this version:
 
 This theme can be used for two purposes:
 
-1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to "Cards view" for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.github.io)
-2. If you're simply making a blog or another website with a bunch of posts, then switch to the "Posts view" for that. I use this view for my blog: [UtkarshVerma's Blog](https://utkarshverma.github.io/blog)
+1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to "Cards view" for that.
+2. If you're simply making a blog or another website with a bunch of posts, then switch to the "Posts view" for that. I use this view for [my blog](https://shaunagordon.com).
 
-This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
+This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [shauna@gordons.me](mailto:shauna@gordons.me).
 
 
 ### Live Demo
@@ -129,7 +133,7 @@ These variables have to be in the `[social]` table of `config.toml` or its equiv
 	github = "ShaunaGordon"
 ```
 
-Once this is done, write up the "**About Me**" section of your website in Markdown as directed here: [Error and About Pages](https://github.com/UtkarshVerma/hugo-dream-plus#error-and-about-pages).
+Once this is done, write up the "**About Me**" section of your website in Markdown as directed here: [Error and About Pages](https://github.com/ShaunaGordon/hugo-dream-plus#error-and-about-pages).
 
 ### Toggling the views
 As stated earlier, this theme has two views, **Cards view** and **Posts view**. The type of view rendering depends on the type of content you feed to **Dream Plus**.
@@ -237,10 +241,6 @@ Also, the tags, when enabled, won't all be displayed on the header and sidebar b
 
 There are some other minor configurations as well. You may set them up by referring to the comments inside the config file.
 
-## Documentation
-The documentation for this repository is currently under work and is added to this repository's [wiki](https://github.com/UtkarshVerma/hugo-dream-plus/wiki).
-Wiki contributions are most welcome. Feel free to ask me about this theme's features for that.
-
 ## Nearly Finished
 After finishing the configurations, you're good to go. So, test your website using:
 ```bash
@@ -258,7 +258,7 @@ hugo server --config cards.toml
 ```
 
 ## Contributing
-Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
+Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/ShaunaGordon/hugo-dream-plus/issues). [Pull requests](https://github.com/ShaunaGordon/hugo-dream-plus/pulls) are also welcome.
 For more detailed instructions on how to contribute, refer to [**CONTRIBUTING.md**](/CONTRIBUTING.md)
 
 ## License
