@@ -26,6 +26,7 @@ $(document).ready(function() {
 
   $('.dream-flip-toggle').click(flip);
 
+  // TODO: Generate this from leaf partials
   var backHeadings = [
     '#about-me',
     '#hiring-me',

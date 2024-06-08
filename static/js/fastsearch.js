@@ -1,3 +1,4 @@
+// TODO: Consider just instantiating here and using setCollection() later
 var fuse; // holds our search engine
 var searchVisible = false;
 var firstRun = true; // allow us to delay loading json data unless search activated
@@ -6,9 +7,6 @@ var resultsAvailable = false; // Did we get any search results?
 const mainInput = document.getElementById('searchInput'); // input box for search
 const searchComponent = document.getElementById("fastSearch");
 const searchResults = document.getElementById("searchResults");
-
-// var first = searchResults.firstChild; // first child of search list
-// var last = searchResults.lastChild; // last child of search list
 
 const hideSearch = () => {
   searchComponent.style.visibility = "hidden";
@@ -101,6 +99,8 @@ mainInput.onkeyup = function(e) {
 // ==========================================
 // fetch some json without jquery
 //
+// TODO: Convert to Fetch API
+// TODO: Consider doing this before first search attempt (async call ftw), and save to localstorage or local cache of some sort
 function fetchJSONFile(path, callback) {
   var httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function() {
