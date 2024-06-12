@@ -68,27 +68,6 @@ const search = {
     }
   },
 
-  moveHighlight: (event, direction) => {
-    const directions = {
-      up: "previousElementSibling",
-      down: "nextElementSibling"
-    }
-    if (search.searchVisible && search.resultsAvailable) {
-      event.preventDefault(); // stop window from scrolling
-
-      const first = search.getFirstResult();
-      const next = document.activeElement.parentElement[directions[direction]]?.firstElementChild;
-
-      if(next) {
-        next.focus();
-      } else if(document.activeElement == search.mainInput) {
-        first.focus();
-      } else if(document.activeElement == first) {
-        search.mainInput.focus();
-      }
-    }
-  },
-
   fetchJSONFile: (path, callback) => {
     fetch(path)
       .then(response => {
