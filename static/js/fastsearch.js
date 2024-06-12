@@ -93,7 +93,7 @@ const search = {
     // We've never fetched the search data, or we have, but it's old
     if(!localStorage.getItem("lastUpdate") || (localStorage.getItem("lastUpdate") != lastmod)) {
       // Let's fetch and store it
-      fetchJSONFile('/index.json', data => {
+      search.fetchJSONFile('/index.json', data => {
           fuse.setCollection(data); // build the index from the json file
           localStorage.setItem("searchData", JSON.stringify(data));
           localStorage.setItem("lastUpdate", lastmod);
