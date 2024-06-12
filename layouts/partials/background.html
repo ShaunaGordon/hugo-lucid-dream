@@ -15,9 +15,13 @@ var bodyBgSwitchIndex = 0;
 	{{ else }}
 		var bgImage = "url(" + {{ index $bgImages 0 }} + ")";
 	{{ end }}
-		console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
+	document.body.style.backgroundImage = bgImage;
+
+	{{/*Create blur effect*/}}
+	{{ if $bgBlur }}
 		document.body.style.setProperty('--blurEff', {{ $bgBlur }});
-		document.body.style.backgroundImage = bgImage;
+		document.body.style.backdropFilter = "blur(var(--blurEff))";
+	{{ end }}
 {{ else }}
     {{ with $bgGradients }}
         var gradients = [[], ...{{ $bgGradients }} ];
@@ -63,8 +67,3 @@ function getRandomInt(min, max) {
   return random;
 }
 </script>
-
-{{/*Create blur effect*/}}
-{{ if $bgBlur }}
-	<div class="blur-overlay"></div>
-{{ end }}

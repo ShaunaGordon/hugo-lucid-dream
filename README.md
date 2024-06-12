@@ -183,7 +183,7 @@ You may also blur the background to a certain extent through the `blur` variable
 	#Random backgrounds
 	images = ["/images/bg1.jpeg", "/images/bg2.jpeg", "/images/bg3.jpeg"]
 	#Blur the background
-	blur = "0.2"
+	blur = "5px"
 ```
 
 ### Card covers
