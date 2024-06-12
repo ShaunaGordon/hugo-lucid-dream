@@ -89,6 +89,18 @@ const search = {
     }
   },
 
+  fetchJSONFile: (path, callback) => {
+    fetch(path)
+      .then(response => {
+        response.json()
+          .then(data => {
+            if(callback) callback(data);
+          })
+          .catch(error => console.error(error));
+      })
+      .catch(error => console.error(error));
+  },
+
   loadSearch: () => {
     // We've never fetched the search data, or we have, but it's old
     if(!localStorage.getItem("lastUpdate") || (localStorage.getItem("lastUpdate") != lastmod)) {
