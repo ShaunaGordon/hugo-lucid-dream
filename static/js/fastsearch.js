@@ -60,7 +60,7 @@ const search = {
 
       if(next) {
         next.focus();
-      } else if(document.activeElement == mainInput) {
+      } else if(document.activeElement == search.mainInput) {
         first.focus();
       } else if(document.activeElement == first) {
         search.mainInput.focus();
