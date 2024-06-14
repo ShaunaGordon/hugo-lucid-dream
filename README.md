@@ -32,7 +32,7 @@ Features Utkarsh's Dream Plus included:
 * ~~Shorte.st website script~~
 * a lot of other minor improvements
 
-In this version:
+Added in Lucid Dream:
 
 * Theme is now a Hugo/Go module
 * Automatic light and dark mode
@@ -79,7 +79,7 @@ The theme can be added as a module by adding the following to the `[module]` sec
 
 ```toml
 [[module.imports]]
-	path = "github.com/ShaunaGordon/hugo-dream-plus"
+	path = "github.com/ShaunaGordon/hugo-lucid-dream"
 ```
 
 ### Legacy (Hugo < 0.55.0, Go < 1.11)
@@ -87,14 +87,14 @@ The theme can be added as a module by adding the following to the `[module]` sec
 The theme can be installed by running the following commands inside your **Hugo website** folder.
 ```shell
 cd themes
-git submodule add https://github.com/ShaunaGordon/hugo-dream-plus dream-plus
+git submodule add https://github.com/ShaunaGordon/hugo-lucid-dream dream-plus
 git submodule update --init --recursive
 ```
 
 ## Getting Started
 Once the theme has been successfully installed, you'll have to do a bit of tuning of the theme to meet your taste.
 
-### Configure Dream Plus
+### Configure Lucid Dream
 Within the [`exampleSite`](/exampleSite) folder, you'll find the config files, [`cards.toml`](/exampleSite/cards.toml) and [`posts.toml`](/exampleSite/posts.toml) which can be used to tweak the theme.
 
 You must use these config files as a basis for your site, since they **take care of the necessary variable declarations**, which you may edit according to your needs.
@@ -135,10 +135,10 @@ These variables have to be in the `[social]` table of `config.toml` or its equiv
 	github = "ShaunaGordon"
 ```
 
-Once this is done, write up the "**About Me**" section of your website in Markdown as directed here: [Error and About Pages](https://github.com/ShaunaGordon/hugo-dream-plus#error-and-about-pages).
+Once this is done, write up the "**About Me**" section of your website in Markdown as directed here: [Error and About Pages](https://github.com/ShaunaGordon/hugo-lucid-dream#error-and-about-pages).
 
 ### Toggling the views
-As stated earlier, this theme has two views, **Cards view** and **Posts view**. The type of view rendering depends on the type of content you feed to **Dream Plus**.
+As stated earlier, this theme has two views, **Cards view** and **Posts view**. The type of view rendering depends on the type of content you feed to **Lucid Dream**.
 Therefore:
 * Having `cards` folder in `/content` folder activates *Card view*.
 * Having `posts` folder in `/content` folder activates *Post view*.
@@ -173,7 +173,7 @@ Specify the image which you want to set as the background through the `images` a
 	images = ["/images/bg1.jpeg", "<some other image>"] 	#Multiple images as background
 ```
 
-Providing multiple images to the `images` array enables the random image background feature of Dream Plus, which cycles the background within the given array every time the site is reloaded.
+Providing multiple images to the `images` array enables the random image background feature of Lucid Dream, which cycles the background within the given array every time the site is reloaded.
 You may also blur the background to a certain extent through the `blur` variable.
 
 > All the background-configuring variables are to be placed inside the `backround` table under `params`
@@ -189,14 +189,14 @@ You may also blur the background to a certain extent through the `blur` variable
 ### Card covers
 
 #### Image Resource Method
-The covers for each post-card or card are processed by Dream Plus using [Hugo Image Processing](https://gohugo.io/content-management/image-processing) for faster website loading times. The lookup paths for the cover file are as stated below:
+The covers for each post-card or card are processed by Lucid Dream using [Hugo Image Processing](https://gohugo.io/content-management/image-processing) for faster website loading times. The lookup paths for the cover file are as stated below:
 - Cards: In the bundle. For example, `/content/cards/<card>/cover.<any-extension>`
 - Posts: In the images folder inside the bundle. For example, `/content/posts/<post>/images/cover.<any-extension>`
 
 #### Frontmatter Method
 Card covers can now be defined through the frontmatter through `cover` key. However image processing won't be applicable on such covers. Also, **frontmatter covers are prioritized over image resources**, therefore, to make the image resource covers render, you'll have to remove the cover key from the frontmatter first.
 
-You may also modify the image processing process through `coverArgs` variable in `[params.features]`. The arguments passed must be for the `.Resize` function since that's what Dream Plus utilizes. For example,
+You may also modify the image processing process through `coverArgs` variable in `[params.features]`. The arguments passed must be for the `.Resize` function since that's what Lucid Dream utilizes. For example,
 ```toml
 [params.features]
 	coverArgs = "400x300 q50"		#Specify resolution and quality of output image
@@ -215,7 +215,7 @@ A collection of cover images can now be defined with a folder in the `content` f
 You may configure your website based on the client device by using the `isMobile` JS variable. It is `true` when the client device is a mobile and vice versa.
 
 ### Error and About pages
-This theme supports total customization of **about** and **error** pages. These pages may be customized through the [`about.md`](/exampleSite/content/about.md) and [`404.md`](/exampleSite/content/404.md) files. *Dream Plus reads the above stated files as plain Markdown text* and then renders them. Once you've finished writing the files and modifying them according to your needs, paste them in the `content` folder of your Hugo site.
+This theme supports total customization of **about** and **error** pages. These pages may be customized through the [`about.md`](/exampleSite/content/about.md) and [`404.md`](/exampleSite/content/404.md) files. *Lucid Dream reads the above stated files as plain Markdown text* and then renders them. Once you've finished writing the files and modifying them according to your needs, paste them in the `content` folder of your Hugo site.
 If you don't want these pages to be built by Hugo and served with their own links such as `<website>.<domain>/about` or `<website>.<domain>/404`. Then you can tell Hugo to ignore these through [`ignoreFiles`](https://gohugo.io/getting-started/configuration/#ignore-files-when-rendering) variable in your `config.toml` file as follows:
 ```toml
 ignoreFiles = ["content/404.md", "content/about.md"]
@@ -262,7 +262,7 @@ hugo server --config cards.toml
 ```
 
 ## Contributing
-Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/ShaunaGordon/hugo-dream-plus/issues). [Pull requests](https://github.com/ShaunaGordon/hugo-dream-plus/pulls) are also welcome.
+Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/ShaunaGordon/hugo-lucid-dream/issues). [Pull requests](https://github.com/ShaunaGordon/hugo-lucid-dream/pulls) are also welcome.
 For more detailed instructions on how to contribute, refer to [**CONTRIBUTING.md**](/CONTRIBUTING.md)
 
 ## License

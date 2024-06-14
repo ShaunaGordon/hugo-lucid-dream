@@ -2,7 +2,7 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-The following is a set of guidelines for contributing to Lucid Dream theme, which is hosted by [ShaunaGordon](https://www.github.com/ShaunaGordon/hugo-dream-plus) on GitHub.
+The following is a set of guidelines for contributing to Lucid Dream theme, which is hosted by [ShaunaGordon](https://www.github.com/ShaunaGordon/hugo-lucid-dream) on GitHub.
 These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 **NOTE: PRs and Issues must be described according to their respective templates while submitting an issue/PR. Fail to do so, and there'll be no response/support from the maintainers whatsoever!**
@@ -43,7 +43,7 @@ This project and everyone participating in it is governed by the [Lucid Dream Co
 
 ## I don't want to read this whole thing I just have a question!!!
 
-If you have a question, then you may ask it through the [issue tracker](https://github.com/ShaunaGordon/hugo-dream-plus/issues).
+If you have a question, then you may ask it through the [issue tracker](https://github.com/ShaunaGordon/hugo-lucid-dream/issues).
 
 ## What should I know before I get started?
 
@@ -86,7 +86,7 @@ Provide more context by answering these questions:
 
 * **Can you reproduce the problem in [`exampleSite`](/exampleSite)?**
 * **Did the problem start happening recently** (e.g. after pulling Lucid Dream' latest commits) or was this always a problem?
-* If the problem started happening recently, **can you reproduce the problem in an older release of Lucid Dream, and/or Hugo?** What's the most recent version in which the problem doesn't happen? You can download older versions of Lucid Dream from [the releases page](https://github.com/ShaunaGordon/hugo-dream-plus/releases).
+* If the problem started happening recently, **can you reproduce the problem in an older release of Lucid Dream, and/or Hugo?** What's the most recent version in which the problem doesn't happen? You can download older versions of Lucid Dream from [the releases page](https://github.com/ShaunaGordon/hugo-lucid-dream/releases).
 * **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
 
 ### Suggesting Enhancements
@@ -123,7 +123,7 @@ Both issue lists are sorted by total number of comments. While not perfect, numb
 
 ### Local development
 
-For working on Lucid Dream, you can simply clone [this repository](https://github.com/ShaunaGordon/hugo-dream-plus), and make changes to its source code. To ensure if your changes work, test them against the [`example site`](/exampleSite).
+For working on Lucid Dream, you can simply clone [this repository](https://github.com/ShaunaGordon/hugo-lucid-dream), and make changes to its source code. To ensure if your changes work, test them against the [`example site`](/exampleSite).
 
 ### Pull Requests
 
@@ -136,7 +136,7 @@ For working on Lucid Dream, you can simply clone [this repository](https://githu
 
 ### Wiki
 
-Currently, the [wiki](https://github.com/ShaunaGordon/hugo-dream-plus/wiki) is a work in progress (as in, doesn't yet exist, since I'm still porting and updating the theme itself). The wiki is supposed to hold the documentation for the theme instead of the readme, which, I think should only introduce the features in short.
+Currently, the [wiki](https://github.com/ShaunaGordon/hugo-lucid-dream/wiki) is a work in progress (as in, doesn't yet exist, since I'm still porting and updating the theme itself). The wiki is supposed to hold the documentation for the theme instead of the readme, which, I think should only introduce the features in short.
 Therefore, any help in descriptively(using GIFs and images) documenting the features in the wiki is appreciated.
 
 ## Styleguides
@@ -174,7 +174,7 @@ Therefore, any help in descriptively(using GIFs and images) documenting the feat
 
 ### Documentation Styleguide
 
-* Any feature is to be wholly documented in the [Wiki](https://github.com/ShaunaGordon/hugo-dream-plus/wiki).
+* Any feature is to be wholly documented in the [Wiki](https://github.com/ShaunaGordon/hugo-lucid-dream/wiki).
 * The `README.MD` must describe the feature in short and link to the wiki for its implementation.
 * The documentation must be grammatically correct. For checking the grammar of your text, you may use [Grammarly](https://app.grammarly.com/) or other tools.
 * Utilizing Markdown is suggested. For example, using code blocks, emojis, quotes etc. They break the monotonicity of the documentation and make it look more lively.
@@ -217,25 +217,25 @@ Please open an issue if you have suggestions for new labels, and if you notice s
 | [`requires-changes`][label-requires-changes] | Pull requests which need to be updated based on review comments and then reviewed again. |
 | [`needs-testing`][label-needs-testing] | Pull requests which need manual testing. |
 
-[label-enhancement]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement
-[label-bug]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abug
-[label-question]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion
-[label-feedback]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Afeedback
-[label-help-wanted]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted
-[label-beginner]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner
-[label-more-information-needed]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Amore-information-needed
-[label-needs-reproduction]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Aneeds-reproduction
-[label-documentation]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation
-[label-blocked]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ablocked
-[label-duplicate]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Aduplicate
-[label-wontfix]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Awontfix
-[label-invalid]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ainvalid
+[label-enhancement]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement
+[label-bug]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Abug
+[label-question]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion
+[label-feedback]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Afeedback
+[label-help-wanted]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted
+[label-beginner]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner
+[label-more-information-needed]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Amore-information-needed
+[label-needs-reproduction]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Aneeds-reproduction
+[label-documentation]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation
+[label-blocked]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Ablocked
+[label-duplicate]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Aduplicate
+[label-wontfix]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Awontfix
+[label-invalid]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Ainvalid
 
-[beginner]:https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner+label%3Ahelp-wanted+sort%3Acomments-desc
-[help-wanted]:https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted+sort%3Acomments-desc+-label%3Abeginner
+[beginner]:https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner+label%3Ahelp-wanted+sort%3Acomments-desc
+[help-wanted]:https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted+sort%3Acomments-desc+-label%3Abeginner
 
-[label-work-in-progress]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Awork-in-progress
-[label-needs-review]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-review
-[label-under-review]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aunder-review
-[label-requires-changes]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Arequires-changes
-[label-needs-testing]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-testing
+[label-work-in-progress]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Apr+label%3Awork-in-progress
+[label-needs-review]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-review
+[label-under-review]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Apr+label%3Aunder-review
+[label-requires-changes]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Apr+label%3Arequires-changes
+[label-needs-testing]: https://github.com/ShaunaGordon/hugo-lucid-dream/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-testing

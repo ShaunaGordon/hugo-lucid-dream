@@ -16,7 +16,7 @@ enableEmoji=true
 
 [module]
 	[[module.imports]]
-		path = "github.com/ShaunaGordon/hugo-dream-plus"
+		path = "github.com/ShaunaGordon/hugo-lucid-dream"
 
 [params]
 	#Favicon for site
