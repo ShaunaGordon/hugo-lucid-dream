@@ -1028,9 +1028,11 @@ li>img {
     stuck !important on. We can use layers to say no, we really do want it this other color.
 */
 @layer overrides {
-    .ui.label {
-        &.green, &.red, &.olive, &.orange, &.yellow, &.purple, &.pink, &.teal, &.violet {
-            filter: brightness(80%);
+    @media (prefers-color-scheme: dark) {
+        .ui.label {
+            &.green, &.red, &.olive, &.orange, &.yellow, &.purple, &.pink, &.teal, &.violet, &.blue {
+                filter: brightness(80%);
+            }
         }
     }
 } /* /overrides */
