@@ -16,7 +16,7 @@
         --preBg: #ffffff70;
         --boxShadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
         --cardBoxShadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
-        --avatarShadow: 0 0 0 0.1em #fff, 0 0 0 0.4rem #eee;
+        --avatarShadow: 0 0 0 0.1rem #fff, 0 0 0 0.4rem #eee;
         --textShadow: 0 5px 10px rgba(0, 0, 0, 0.5);
         --textShadowHover: 0 8px 20px rgba(0, 0, 0, 0.95);
         --shareText: #3e3e3e;
@@ -44,7 +44,7 @@
         --preBg: #ffffff70;
         --boxShadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
         --cardBoxShadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
-        --avatarShadow: 0 0 0 0.1em #fff, 0 0 0 0.4rem #eee;
+        --avatarShadow: 0 0 0 0.1rem #fff, 0 0 0 0.4rem #eee;
         --textShadow: 0 5px 10px rgba(0, 0, 0, 0.5);
         --textShadowHover: 0 8px 20px rgba(0, 0, 0, 0.95);
         --shareText: #3e3e3e;
@@ -96,7 +96,7 @@ It doesn't make sense to split these ones
         width: 2vw;
     }
     .post-head {
-        font-size: 2em;
+        font-size: 2rem;
     }
     .post-head,
     .dream-tags,
@@ -147,7 +147,7 @@ a {
 
 
 li:not('.toc') {
-    line-height: 1.4285em;
+    line-height: 1.4285;
 }
 
 .row.box {
@@ -223,7 +223,7 @@ li:not('.toc') {
 .ui {
     &.secondary.segment {
         background-color: var(--postBg);
-        padding: auto 1.5em 0 1.5em;
+        padding: auto 1.5rem 0 1.5rem;
         color: var(--uiText);
     }
 
@@ -265,7 +265,7 @@ ul>li {
 /*Top nav bar*/
 
 .top.bar {
-    background-color: #00000066 !important;
+    background-color: #00000066;
     overflow-y: hidden;
     height: 7vh;
     overflow-x: auto;
@@ -295,7 +295,7 @@ ul>li {
         }
 
         &.header {
-            letter-spacing: 0.05em;
+            letter-spacing: 0.05rem;
             font: 1.4rem 'Source Sans Pro';
         }
     }
@@ -323,7 +323,7 @@ ul>li {
 
 .toc {
     font-size: 1.1rem;
-    line-height: 1rem;
+    line-height: 1;
     background-color: var(--tocBg);
     border: 1px solid #8a8a8a6b;
     border-radius: var(--borderRadius);
@@ -360,20 +360,20 @@ ul>li {
     blockquote {
         background: val(--blockquoteBg);
         border-left: 8px solid #ccc;
-        padding: 0.4em 0.8em;
-        margin: 0.5em 0 0.5em 0;
+        padding: 0.4rem 0.8rem;
+        margin: 0.5rem 0 0.5rem 0;
     }
 
     ul+blockquote {
-        margin-left: 2.5em;
+        margin-left: 2.5rem;
     }
 
     code {
-        font-size: 0.8em;
+        font-size: 0.8rem;
         background-color: val(--codeBg);
-        padding: 0 0.2em;
+        padding: 0 0.2rem;
         border: 1px solid #929696;
-        border-radius: 0.2em;
+        border-radius: 0.2rem;
     }
 
     pre {
@@ -384,7 +384,7 @@ ul>li {
 
         code {
             font-family: 'Inconsolata', monospace;
-            font-size: 1.2em;
+            font-size: 1.2rem;
             background-color: unset;
             padding: initial;
             border: unset;
@@ -401,20 +401,20 @@ ul>li {
 p>img:not(.emoji),
 li>img {
     box-shadow: var(--boxShadow);
-    margin: 1em auto 1em auto;
+    margin: 1rem auto;
 }
 
 .emoji {
-    height: 1.1em;
-    width: 1.1em;
-    vertical-align: -0.15em;
+    height: 1.1rem;
+    width: 1.1rem;
+    vertical-align: -0.15rem;
     background-color: transparent;
 }
 
 .youtube {
     &.container {
         position: relative;
-        margin: auto auto 1em auto;
+        margin: auto auto 1rem auto;
         width: 80%;
         padding-bottom: 45%;
         box-shadow: var(--boxShadow);
@@ -453,7 +453,7 @@ li>img {
     &>div {
         height: auto;
         width: 100%;
-        max-height: 30em;
+        max-height: 30rem;
         overflow-y: auto;
         padding: 0 2px 0 2px;
 
@@ -468,7 +468,7 @@ li>img {
 }
 
 .chroma {
-    padding: 0 0.2em 0 0.2em;
+    padding: 0 0.2rem 0 0.2rem;
 }
 
 /*Share card*/
@@ -482,7 +482,7 @@ li>img {
         margin-bottom: 1px;
         display: block;
         color: val(--shareText);
-        font: bold 1.2em 'Lato';
+        font: bold 1.2rem 'Lato';
         transition: 1s;
 
         &:hover {
@@ -493,7 +493,7 @@ li>img {
     .desc {
         display: block;
         color: val(--shareText);
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 
     .buttons {
@@ -504,8 +504,8 @@ li>img {
 }
 
 .author .avatar {
-    height: 5em;
-    width: 5em;
+    height: 5rem;
+    width: 5rem;
     margin: auto;
     border-radius: 50%;
     box-shadow: var(--avatarShadow);
@@ -513,25 +513,25 @@ li>img {
 
 .info {
     max-width: 60%;
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 
 .spacer {
-    min-width: 1em;
+    min-width: 1rem;
 }
 
 .facebook {
     align-self: flex-start;
-    width: 7.5em;
-    margin-right: 0.1em;
+    width: 7.5rem;
+    margin-right: 0.1rem;
     transition: 1s;
 }
 
 .twitter {
     align-self: flex-end;
-    margin-left: 0.1em;
-    width: 7.5em;
+    margin-left: 0.1rem;
+    width: 7.5rem;
     transition: 1s;
 }
 
@@ -541,8 +541,6 @@ li>img {
 }
 
 /*Flip settings*/
-
-
 
 .flipper {
     transition: 0.8s;
@@ -573,7 +571,7 @@ li>img {
 
 .back {
     transform: rotateY(180deg);
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
 }
 
 /*Sidebar*/
@@ -602,19 +600,19 @@ li>img {
         &.active,
         &.animating {
             font-size: 14px;
-            padding: 0.1em 0.1em 0 1.5em;
+            padding: 0.1rem 0.1rem 0 1.5rem;
         }
 
         a i {
             position: absolute;
-            left: 0.3em;
+            left: 0.3rem;
             top: 25%;
         }
     }
 
 
     .item {
-        padding: 0.3em 0.3em 0.3em 2em;
+        padding: 0.3rem 0.3rem 0.3rem 2rem;
         color: white;
 
         &:before {
@@ -652,8 +650,6 @@ li>img {
         padding: 0;
     }
 }
-
-
 
 .dream-categories::-webkit-scrollbar {
     width: 4px;
@@ -702,7 +698,7 @@ li>img {
     }
 
     a p {
-        padding-left: 2em;
+        padding-left: 2rem;
     }
 
     .accordion {
@@ -715,8 +711,8 @@ li>img {
 
         div {
             position: relative;
-            padding-top: 0.3em;
-            padding-bottom: 0.3em;
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
             transition: 0.5s;
 
             &:hover {
@@ -726,12 +722,12 @@ li>img {
     }
 
     .content, .content.active, .content.animating {
-        padding: 0.1em 0 0.1em 1.6em;
+        padding: 0.1rem 0 0.1rem 1.6rem;
     }
 
     .content a i {
         position: absolute;
-        left: 0.3em;
+        left: 0.3rem;
         top: 20%;
     }
 
@@ -742,7 +738,7 @@ li>img {
 
     .dream-categories {
         overflow-x: hidden;
-        max-height: 9em;
+        max-height: 15rem;
     }
 }
 
@@ -765,7 +761,7 @@ li>img {
 .intro {
     margin: auto;
     font: 200 1.2rem 'Droid Serif Italic';
-    line-height: 1.2rem;
+    line-height: 1.2;
     width: 80%;
     color: var(--introText);
     opacity: 0;
@@ -778,7 +774,7 @@ li>img {
 .utility-info {
     position: absolute;
     height: auto;
-    padding-left: 1em;
+    padding-left: 1rem;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -846,6 +842,8 @@ li>img {
     z-index: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 425px;
+    container-type: size;
 
     @media screen and (min-width: 1386px) {
         width: calc(50% - 2rem);
@@ -863,6 +861,10 @@ li>img {
 
         .title-content {
             bottom: 6rem;
+
+            @container (max-width: 510px) {
+                bottom: 7.5rem;
+            }
         }
 
         .card.title-content {
@@ -888,7 +890,7 @@ li>img {
         display: block;
         width: 10%;
         height: 0.2rem;
-        margin: 0.5em auto;
+        margin: 0.5rem auto;
         border: 0;
         z-index: 2;
         background: var(--cardBar);
@@ -907,11 +909,6 @@ li>img {
         }
       }
 
-    .image {
-      width: 100%;
-      height: 100%;
-    }
-
     .sub.title {
         font: 400 1rem 'Abril Fatface';
     }
@@ -925,7 +922,7 @@ li>img {
         display: inline-block;
 
         &:not(:last-child) {
-            margin-right: 1em;
+            margin-right: 1rem;
         }
     }
 
@@ -937,12 +934,24 @@ li>img {
 }
 
 .license.statement {
-  font-size: 1.1em;
-  padding-left: 1em;
+  font-size: 1.1rem;
+  padding-left: 1rem;
   margin: auto;
 }
 
 /* Search */
+
+.searchHint {
+    color: var(--uiText);
+    padding: .5rem;
+    opacity: 1;
+    transition: 1s;
+
+    .icon {
+        margin-left: .5rem;
+    }
+}
+
 #fastSearch {
     visibility: hidden;
     display: inline-block;
@@ -958,7 +967,7 @@ li>img {
         padding: 4px 10px;
         width: 100%;
         height: 3rem;
-        font-size: 1.6em;
+        font-size: 1.6rem;
         font-weight: bold;
         border: none;
         outline: none;
@@ -987,7 +996,7 @@ li>img {
             margin-bottom: 0;
 
             &.title {
-                font-size: 1.1em;
+                font-size: 1.1rem;
                 margin-bottom: 10px;
                 display: inline-block;
             }
@@ -1020,7 +1029,7 @@ li>img {
 */
 @layer overrides {
     .ui.label {
-        &.green, &.red, &.olive, &.orange, &.yellow, &.purple, &.pink {
+        &.green, &.red, &.olive, &.orange, &.yellow, &.purple, &.pink, &.teal, &.violet {
             filter: brightness(80%);
         }
     }

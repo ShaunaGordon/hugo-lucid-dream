@@ -187,17 +187,28 @@ You may also blur the background to a certain extent through the `blur` variable
 ```
 
 ### Card covers
+
+#### Image Resource Method
 The covers for each post-card or card are processed by Dream Plus using [Hugo Image Processing](https://gohugo.io/content-management/image-processing) for faster website loading times. The lookup paths for the cover file are as stated below:
 - Cards: In the bundle. For example, `/content/cards/<card>/cover.<any-extension>`
 - Posts: In the images folder inside the bundle. For example, `/content/posts/<post>/images/cover.<any-extension>`
 
-> ~~**Specifying the cover image through the frontmatter has now been deprecated**~~.
+#### Frontmatter Method
 Card covers can now be defined through the frontmatter through `cover` key. However image processing won't be applicable on such covers. Also, **frontmatter covers are prioritized over image resources**, therefore, to make the image resource covers render, you'll have to remove the cover key from the frontmatter first.
 
 You may also modify the image processing process through `coverArgs` variable in `[params.features]`. The arguments passed must be for the `.Resize` function since that's what Dream Plus utilizes. For example,
 ```toml
 [params.features]
 	coverArgs = "400x300 q50"		#Specify resolution and quality of output image
+```
+
+#### Cover Images Collection
+A collection of cover images can now be defined with a folder in the `content` folder. Define the path with `coverDir`:
+
+
+```toml
+[params.features]
+	coverDir = "/images/covers/"
 ```
 
 ### Device detection

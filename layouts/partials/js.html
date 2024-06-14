@@ -10,7 +10,9 @@
 	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 {{ end }}
 
-{{ partial "search.html" . }}
+{{ with $.Site.Params.features.search}}
+	{{ partial "search.html" . }}
+{{ end }}
 
 {{/*Load custom JS*/}}
 {{ range $val := $.Site.Params.features.customJS }}

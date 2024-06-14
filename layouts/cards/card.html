@@ -13,7 +13,14 @@
 		{{ $image := $image.Resize ($.Scratch.Get "args") }}
 		{{ $.Scratch.Set "cover" $image.RelPermalink }}
 	{{ else }}
-		{{ $.Scratch.Set "cover" (print "/img/default" (index (seq 1 6 | shuffle) 0) ".jpg") }}
+		{{ $coverDir := $.Site.Params.features.coverDir }}
+		{{ with and $coverDir (os.Stat $coverDir) }}
+			{{ $covers := os.ReadDir (print "/content" $coverDir) }}
+			{{ $image := index (shuffle $covers) 0 }}
+			{{ $.Scratch.Set "cover" (print $coverDir $image.Name) }}
+		{{ else }}
+			{{ $.Scratch.Set "cover" (print "/img/default" (index (seq 1 6 | shuffle) 0) ".jpg") }}
+		{{ end }}
 	{{ end }}
 {{ end }}
 {{ $cover := $.Scratch.Get "cover" }}

@@ -81,12 +81,21 @@
 		</div>
 	{{ end }}
 
-	{{/*RSS button*/}}
-	{{ if and (eq .contentType "posts") .rssButton }}
-		<div class="item right">
-			<a href="/posts/index.xml">
+
+	<div class="item right">
+		{{/*Search Hint*/}}
+		{{ if .context.Site.Params.features.search }}
+			<div class="searchHint"
+			id="searchHint">
+				<span id="searchMod"></span>+/ <i class="inverted search icon"></i>
+			</div>
+		{{ end }}
+
+		{{/*RSS button*/}}
+		{{ if and (eq .contentType "posts") .rssButton }}
+			<a class="item" href="/posts/index.xml">
 				<i class="inverted big link rss icon" title="{{ i18n `rssFeed` }}"></i>
 			</a>
-		</div>
-	{{ end }}
+		{{ end }}
+	</div>
 </nav>

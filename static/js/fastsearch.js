@@ -4,6 +4,8 @@ const search = {
   mainInput: document.getElementById('searchInput'),
   searchComponent: document.getElementById('fastSearch'),
   searchResults: document.getElementById('searchResults'),
+  searchHint: document.getElementById('searchHint'),
+  searchMod: document.getElementById('searchMod'),
   options: {
     shouldSort: true,
     location: 0,
@@ -25,12 +27,14 @@ const search = {
     search.searchComponent.style.visibility = "hidden";
     document.activeElement.blur();
     search.searchVisible = false;
+    search.searchHint.style.opacity = 1;
   },
 
   showSearch: () => {
     search.searchComponent.style.visibility = "visible"; // show search box
     search.mainInput.focus(); // put focus in input box so you can just start typing
     search.searchVisible = true; // search visible
+    search.searchHint.style.opacity = 0;
   },
 
   toggleSearch: () => {
@@ -123,37 +127,64 @@ const search = {
     }
 
     search.searchResults.innerHTML = searchitems.join('');
+  },
+
+  detectPlatform: () => {
+    /* navigator.platform is deprecated in favor of feature detection,
+       but this is exactly the use-case in MDN's docs and there's no
+       modern alternative. :upside_down_face:
+       We'll continue using this for now. Worst case, it falls back to
+       showing ctrl for all platforms.
+    */
+    let modifier = 'ctrl';
+    if("platform" in navigator && (navigator.platform.indexOf("Mac") === 0 ||
+    navigator.platform === "iPhone")) {
+      modifier = '⌘'
+    }
+    search.searchMod.innerText = modifier;
+  },
+
+  registerListeners: () => {
+    document.addEventListener('keydown', event => {
+
+      // CMD-/ (ctrl-/ for non-Mac) to show / hide Search
+      if ((event.metaKey || event.ctrlKey) && event.key === '/') {
+          // Toggle visibility of search box
+          search.toggleSearch();
+      }
+
+      switch (event.key) {
+        case 'Escape':
+          search.hideSearch();
+          break;
+        case 'ArrowDown':
+          search.moveHighlight(event, 'down');
+          break;
+        case 'ArrowUp':
+          search.moveHighlight(event, 'up');
+        default:
+          break;
+      }
+    });
+
+    search.mainInput.onkeyup = function(e) {
+      search.executeSearch(this.value);
+    }
+
+    search.searchHint.onclick = () => {
+      search.showSearch();
+    }
+  },
+
+  init: () => {
+    search.detectPlatform();
+    search.registerListeners();
+    search.loadSearch();
   }
 };
-
-document.addEventListener('keydown', event => {
-
-  // CMD-/ (ctrl-/ for non-Mac) to show / hide Search
-  if ((event.metaKey || event.ctrlKey) && event.key === '/') {
-      // Toggle visibility of search box
-      search.toggleSearch();
-  }
-
-  switch (event.key) {
-    case 'Escape':
-      search.hideSearch();
-      break;
-    case 'ArrowDown':
-      search.moveHighlight(event, 'down');
-      break;
-    case 'ArrowUp':
-      search.moveHighlight(event, 'up');
-    default:
-      break;
-  }
-});
-
-search.mainInput.onkeyup = function(e) {
-  search.executeSearch(this.value);
-}
 
 const fuse = new Fuse([], search.options);
 
 // Load it immediately on file load, so we're ready to go immediately
 // The data loads in the background and pulls from local storage unless the site's been updated, so we don't have to worry about excessive server calls
-search.loadSearch();
+search.init();
