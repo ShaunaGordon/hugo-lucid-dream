@@ -25,8 +25,8 @@ enableEmoji=true
 	[params.author]
 		name = "Shauna Gordon"
 		description = "Just a random blog for random stuff, mostly tech-related."
-		avatar = "https://raw.githubusercontent.com/UtkarshVerma/utkarshverma.github.io/source/static/images/avatar.jpg"
-		motto = "A keen maker, programmer and an Instructables author."
+		avatar = "https://shaunagordon.com/images/avatar.png"
+		motto = "I make things."
 
 	[params.features]
 		#Enable Twitter Emoji
@@ -36,7 +36,7 @@ enableEmoji=true
 		#Enable share card
 		shareCard = true
 		#Use custom CSS
-		customCSS = ["https://cdn.rawgit.com/UtkarshVerma/hugo-dream-plus/ae11561d/exampleSite/static/css/highlight.css"]
+		customCSS = []
 
 	#Tags settings
 	[params.tags]

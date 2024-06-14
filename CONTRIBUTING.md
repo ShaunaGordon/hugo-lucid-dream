@@ -1,8 +1,8 @@
-# Contributing to Dream Plus
+# Contributing to Lucid Dream
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-The following is a set of guidelines for contributing to Dream Plus theme, which is hosted by [UtkarshVerma](https://www.github.com/UtkarshVerma/hugo-dream-plus) on GitHub.
+The following is a set of guidelines for contributing to Lucid Dream theme, which is hosted by [ShaunaGordon](https://www.github.com/ShaunaGordon/hugo-dream-plus) on GitHub.
 These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 **NOTE: PRs and Issues must be described according to their respective templates while submitting an issue/PR. Fail to do so, and there'll be no response/support from the maintainers whatsoever!**
@@ -10,36 +10,44 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 ---
 
 ### Table of Contents
-* [Code of Conduct](#code-of-conduct)
-* [I don't want to read this whole thing, I just have a question!!!](#i-dont-want-to-read-this-whole-thing-i-just-have-a-question)
-* [What should I know before I get started?](#what-should-i-know-before-i-get-started)
-* [How can I contribute?](#how-can-I-contribute)
-  - [Reporting Bugs](#reporting-bugs)
-  - [Suggesting Enhancements](#suggesting-enhancements)
-  - [Your First Code Contribution](#your-first-code-contribution)
-  - [Pull Requests](#pull-requests)
-  - [Wiki](#wiki)
-* [Styleguides](#Styleguides)
-  - [Git Commit Messages](#git-commit-messages)
-  - [(Hu)go Templating Styleguide](#hugo-styleguide)
-  - [Documentation Styleguide](#documentation-styleguide)
-
-* [Additional Notes](#additional-notes)
-  - [Issue and Pull Request Labels](#issue-and-pull-request-labels)
+- [Contributing to Lucid Dream](#contributing-to-lucid-dream)
+    - [Table of Contents](#table-of-contents)
+  - [Code of Conduct](#code-of-conduct)
+  - [I don't want to read this whole thing I just have a question!!!](#i-dont-want-to-read-this-whole-thing-i-just-have-a-question)
+  - [What should I know before I get started?](#what-should-i-know-before-i-get-started)
+  - [How can I contribute?](#how-can-i-contribute)
+    - [Reporting Bugs](#reporting-bugs)
+      - [Before Submitting A Bug Report](#before-submitting-a-bug-report)
+      - [How Do I Submit A (Good) Bug Report?](#how-do-i-submit-a-good-bug-report)
+    - [Suggesting Enhancements](#suggesting-enhancements)
+      - [Before Submitting An Enhancement Suggestion](#before-submitting-an-enhancement-suggestion)
+      - [How Do I Submit A (Good) Enhancement Suggestion?](#how-do-i-submit-a-good-enhancement-suggestion)
+    - [Your First Code Contribution](#your-first-code-contribution)
+    - [Local development](#local-development)
+    - [Pull Requests](#pull-requests)
+    - [Wiki](#wiki)
+  - [Styleguides](#styleguides)
+    - [Git Commit Messages](#git-commit-messages)
+    - [Hugo Templating Styleguide](#hugo-templating-styleguide)
+    - [Documentation Styleguide](#documentation-styleguide)
+  - [Additional Notes](#additional-notes)
+    - [Issue and Pull Request Labels](#issue-and-pull-request-labels)
+      - [Type of Issue and Issue State](#type-of-issue-and-issue-state)
+      - [Pull Request Labels](#pull-request-labels)
 
 ---
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Dream Plus Code of Conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
+This project and everyone participating in it is governed by the [Lucid Dream Code of Conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [shauna@gordons.me](mailto:shauna@gordons.me).
 
 ## I don't want to read this whole thing I just have a question!!!
 
-If you have a question, then you may ask it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues).
+If you have a question, then you may ask it through the [issue tracker](https://github.com/ShaunaGordon/hugo-dream-plus/issues).
 
 ## What should I know before I get started?
 
-**Dream Plus** is based on [Hugo](https://gohugo.io), and consists of multiple programming languages. Therefore to be able to work on it, you need to have a decent amount of knowledge about the following:
+**Lucid Dream** is based on [Hugo](https://gohugo.io), and consists of multiple programming languages. Therefore to be able to work on it, you need to have a decent amount of knowledge about the following:
 
 * [(Hu)go Templating](https://gohugo.io/templates/introduction/)
 * [Hugo](https://gohugo.io/documentation/)
@@ -50,7 +58,7 @@ If you have a question, then you may ask it through the [issue tracker](https://
 ## How can I contribute?
 ### Reporting Bugs
 
-This section guides you through submitting a bug report for Dream Plus. Following these guidelines helps maintainers and the community understand your report :pencil:, reproduce the behavior :computer: :computer:, and find related reports :mag_right:.
+This section guides you through submitting a bug report for Lucid Dream. Following these guidelines helps maintainers and the community understand your report :pencil:, reproduce the behavior :computer: :computer:, and find related reports :mag_right:.
 
 Before creating bug reports, please check [this list](#before-submitting-a-bug-report) as you might find out that you don't need to create one. When you are creating a bug report, please [include as many details as possible](#how-do-i-submit-a-good-bug-report). Fill out [the required template](/.github/ISSUE_TEMPLATE), the information it asks for helps us resolve issues faster.
 
@@ -77,36 +85,36 @@ Explain the problem and include additional details to help maintainers reproduce
 Provide more context by answering these questions:
 
 * **Can you reproduce the problem in [`exampleSite`](/exampleSite)?**
-* **Did the problem start happening recently** (e.g. after pulling Dream Plus' latest commits) or was this always a problem?
-* If the problem started happening recently, **can you reproduce the problem in an older release of Dream Plus, and/or Hugo?** What's the most recent version in which the problem doesn't happen? You can download older versions of Dream Plus from [the releases page](https://github.com/UtkarshVerma/hugo-dream-plus/releases).
+* **Did the problem start happening recently** (e.g. after pulling Lucid Dream' latest commits) or was this always a problem?
+* If the problem started happening recently, **can you reproduce the problem in an older release of Lucid Dream, and/or Hugo?** What's the most recent version in which the problem doesn't happen? You can download older versions of Lucid Dream from [the releases page](https://github.com/ShaunaGordon/hugo-dream-plus/releases).
 * **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
 
 ### Suggesting Enhancements
 
-This section guides you through submitting an enhancement suggestion for Dream Plus, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion :pencil: and find related suggestions :mag_right:.
+This section guides you through submitting an enhancement suggestion for Lucid Dream, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion :pencil: and find related suggestions :mag_right:.
 
 Before creating enhancement suggestions, please check [this list](#before-submitting-an-enhancement-suggestion) as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please [include as many details as possible](#how-do-i-submit-a-good-enhancement-suggestion). Fill in [the template](.github/ISSUE_TEMPLATE), including the steps that you imagine you would take if the feature you're requesting existed.
 
 #### Before Submitting An Enhancement Suggestion
 
-* You might discover that the enhancement is already available. Most importantly, check if your clone is even with Dream Plus's master branch.
+* You might discover that the enhancement is already available. Most importantly, check if your clone is even with Lucid Dream's master branch.
 * Check if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
 
 #### How Do I Submit A (Good) Enhancement Suggestion?
 
-Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com/features/issues/). Create an issue on Dream Plus, and provide the following information:
+Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com/features/issues/). Create an issue on Lucid Dream, and provide the following information:
 
 * **Use a clear and descriptive title** for the issue to identify the suggestion.
 * **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
 * **Provide specific examples to demonstrate the steps**. Include copy/pasteable snippets which you use in those examples, as [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
 * **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
-* **Include screenshots and animated GIFs** which help you demonstrate the steps or point out the part of Dream Plus which the suggestion is related to. You can use [this tool](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://github.com/GNOME/byzanz) on Linux.
+* **Include screenshots and animated GIFs** which help you demonstrate the steps or point out the part of Lucid Dream which the suggestion is related to. You can use [this tool](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://github.com/GNOME/byzanz) on Linux.
 * **Explain why this enhancement would be useful** to most users.
-* **Specify which version of Dream Plus and Hugo you're using.** You can get the exact version by running `hugo version` in your terminal.
+* **Specify which version of Lucid Dream and Hugo you're using.** You can get the exact version by running `hugo version` in your terminal.
 
 ### Your First Code Contribution
 
-Unsure where to begin contributing to Dream Plus? You can start by looking through these `beginner` and `help-wanted` issues:
+Unsure where to begin contributing to Lucid Dream? You can start by looking through these `beginner` and `help-wanted` issues:
 
 * [Beginner issues][beginner] - issues which should only require a few lines of code, and a test or two.
 * [Help wanted issues][help-wanted] - issues which should be a bit more involved than `beginner` issues.
@@ -115,7 +123,7 @@ Both issue lists are sorted by total number of comments. While not perfect, numb
 
 ### Local development
 
-For working on Dream Plus, you can simply clone [this repository](https://github.com/UtkarshVerma/hugo-dream-plus), and make changes to its source code. To ensure if your changes work, test them against the [`example site`](/exampleSite).
+For working on Lucid Dream, you can simply clone [this repository](https://github.com/ShaunaGordon/hugo-dream-plus), and make changes to its source code. To ensure if your changes work, test them against the [`example site`](/exampleSite).
 
 ### Pull Requests
 
@@ -128,7 +136,7 @@ For working on Dream Plus, you can simply clone [this repository](https://github
 
 ### Wiki
 
-Currently, the [wiki](https://github.com/UtkarshVerma/hugo-dream-plus/wiki) is a work in progress. The wiki is supposed to hold the documentation for the theme instead of the readme, which, I think should only introduce the features in short.
+Currently, the [wiki](https://github.com/ShaunaGordon/hugo-dream-plus/wiki) is a work in progress (as in, doesn't yet exist, since I'm still porting and updating the theme itself). The wiki is supposed to hold the documentation for the theme instead of the readme, which, I think should only introduce the features in short.
 Therefore, any help in descriptively(using GIFs and images) documenting the features in the wiki is appreciated.
 
 ## Styleguides
@@ -166,7 +174,7 @@ Therefore, any help in descriptively(using GIFs and images) documenting the feat
 
 ### Documentation Styleguide
 
-* Any feature is to be wholly documented in the [Wiki](https://github.com/UtkarshVerma/hugo-dream-plus/wiki).
+* Any feature is to be wholly documented in the [Wiki](https://github.com/ShaunaGordon/hugo-dream-plus/wiki).
 * The `README.MD` must describe the feature in short and link to the wiki for its implementation.
 * The documentation must be grammatically correct. For checking the grammar of your text, you may use [Grammarly](https://app.grammarly.com/) or other tools.
 * Utilizing Markdown is suggested. For example, using code blocks, emojis, quotes etc. They break the monotonicity of the documentation and make it look more lively.
@@ -192,7 +200,7 @@ Please open an issue if you have suggestions for new labels, and if you notice s
 | [`question`][label-question] | Questions more than bug reports or feature requests (e.g. how do I do X). |
 | [`feedback`][label-feedback] | General feedback more than bug reports or feature requests. |
 | [`help-wanted`][label-help-wanted] | Help from the community in resolving these issues is appreciated. |
-| [`beginner`][label-beginner] | Less complex issues which would be good first issues to work on for users who want to contribute to Dream Plus. |
+| [`beginner`][label-beginner] | Less complex issues which would be good first issues to work on for users who want to contribute to Lucid Dream. |
 | [`more-information-needed`][label-more-information-needed] | More information needs to be collected about these problems or feature requests (e.g. steps to reproduce). |
 | [`needs-reproduction`][label-needs-reproduction] | Likely bugs, but haven't been reliably reproduced. |
 | [`duplicate`][label-duplicate] | Issues which are duplicates of other issues, i.e. they have been reported before. |
@@ -209,25 +217,25 @@ Please open an issue if you have suggestions for new labels, and if you notice s
 | [`requires-changes`][label-requires-changes] | Pull requests which need to be updated based on review comments and then reviewed again. |
 | [`needs-testing`][label-needs-testing] | Pull requests which need manual testing. |
 
-[label-enhancement]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement
-[label-bug]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abug
-[label-question]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion
-[label-feedback]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Afeedback
-[label-help-wanted]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted
-[label-beginner]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner
-[label-more-information-needed]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Amore-information-needed
-[label-needs-reproduction]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Aneeds-reproduction
-[label-documentation]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation
-[label-blocked]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ablocked
-[label-duplicate]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Aduplicate
-[label-wontfix]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Awontfix
-[label-invalid]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ainvalid
+[label-enhancement]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement
+[label-bug]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abug
+[label-question]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion
+[label-feedback]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Afeedback
+[label-help-wanted]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted
+[label-beginner]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner
+[label-more-information-needed]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Amore-information-needed
+[label-needs-reproduction]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Aneeds-reproduction
+[label-documentation]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation
+[label-blocked]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ablocked
+[label-duplicate]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Aduplicate
+[label-wontfix]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Awontfix
+[label-invalid]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ainvalid
 
-[beginner]:https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner+label%3Ahelp-wanted+sort%3Acomments-desc
-[help-wanted]:https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted+sort%3Acomments-desc+-label%3Abeginner
+[beginner]:https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner+label%3Ahelp-wanted+sort%3Acomments-desc
+[help-wanted]:https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted+sort%3Acomments-desc+-label%3Abeginner
 
-[label-work-in-progress]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Awork-in-progress
-[label-needs-review]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-review
-[label-under-review]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aunder-review
-[label-requires-changes]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Arequires-changes
-[label-needs-testing]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-testing
+[label-work-in-progress]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Awork-in-progress
+[label-needs-review]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-review
+[label-under-review]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aunder-review
+[label-requires-changes]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Arequires-changes
+[label-needs-testing]: https://github.com/ShaunaGordon/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-testing
