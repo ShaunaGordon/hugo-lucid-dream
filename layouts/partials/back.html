@@ -4,28 +4,14 @@
 {{/*Content*/}}
 <div class="ui centered grid about">
 	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column about">
-		<section class="ui stacked segments">
-			<div class="ui inverted segment">
-				<article class="twemoji">
-					{{ readFile "/content/about.md" | markdownify | emojify }}
-				</article>
-			</div>
-		</section>
-
-        <section class="ui stacked segments">
-            <div class="ui inverted segment">
-                <article class="twemoji">
-                    {{ readFile "/content/buy-me-coffee.md" | markdownify | emojify }}
-                </article>
-            </div>
-        </section>
-
-        <section class="ui stacked segments">
-            <div class="ui inverted segment">
-                <article class="twemoji">
-                    {{ readFile "/content/hire-me.md" | markdownify | emojify }}
-                </article>
-            </div>
-        </section>
+        {{ range where .Site.RegularPages "Section" "about" }}
+            <section class="ui stacked segments">
+                <div class="ui inverted segment">
+                    <article class="twemoji">
+                        {{ .Content | markdownify | emojify }}
+                    </article>
+                </div>
+            </section>
+        {{ end }}
 	</div>
 </div>
