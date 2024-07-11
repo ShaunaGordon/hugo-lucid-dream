@@ -39,7 +39,8 @@ Added in Lucid Dream:
 * A number of under-the-hood updates, including modernizing the CSS and updating JS
 * Subtitle support, visible on both the cards and the post view
 * Series support
-* Add Gitlab and arbitrary file links
+* Gitlab and arbitrary file links in the social bar
+* Dynamic, leaf/bundle-based About page
 * Site search! 🥳
 
 This theme can be used for two purposes:
@@ -220,6 +221,22 @@ If you don't want these pages to be built by Hugo and served with their own link
 ```toml
 ignoreFiles = ["content/404.md", "content/about.md"]
 ```
+
+#### Writing Your About Page
+
+The About page now uses a page bundle/leaf-based setup for its content. This allows the content to show up in separate blocks ([See my About page](https://shaunagordon.com/#about-me) for an example of how this looks).
+
+To add content to your About page, create a `content/about` folder, then place each block as a separate file within it, using the `weight` frontmatter option to set their order. So your file tree looks something like this:
+
+```
+content
+-about
+--about.md
+--skills.md
+--hire-me.md
+```
+
+If you don't want separate blocks and prefer to have it just one big block, simply put all your content into one file within the `about` folder.
 
 ### Custom favicon
 You may also set a custom favicon for your website through the `favicon` config variable under `params`. For example,
