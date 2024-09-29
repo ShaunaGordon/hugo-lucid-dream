@@ -2,7 +2,7 @@
 	<div class="item">
 		<i class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n `flip` }}"></i>
 	</div>
-	{{ range $index, $val := $.Site.Social }}
+	{{ range $index, $val := $.Site.Params }}
 		{{ $.Scratch.Set $index $val }}
 	{{ end }}
 

@@ -4,7 +4,7 @@
 {{ $authorAvatar := .Params.author.avatar | default (cond $flag $.Site.Params.author.avatar (index (seq 1 4 | shuffle) 0 )) }}
 {{ $avatarFlag := cond (ne .Params.author.avatar nil) false (not $flag) }}
 {{ $authorDesc := .Params.author.desc | default $.Site.Params.author.motto }}
-{{ $twitter := .Params.author.twitter | default (cond (and (ne $.Site.Social.twitter nil) $flag) $.Site.Social.twitter "") }}
+{{ $twitter := .Params.author.twitter | default (cond (and (ne $.Site.Params.twitter nil) $flag) $.Site.Params.twitter "") }}
 
 {{/*Author description*/}}
 <div class="author">
@@ -29,7 +29,7 @@
 			'width=626,height=436'); return false;">
 		<button class="ui facebook button"><i class="facebook icon"></i>Share</button>
 	</div>
-	<div class="twitter none flexbox" onclick="window.open('https://twitter.com/intent/tweet?text=Read &quot;{{ .LinkTitle }} {{ with .Site.Social.twitter }}&quot; by @{{ . }}{{ end }} {{ .Permalink }}','_self')">
+	<div class="twitter none flexbox" onclick="window.open('https://twitter.com/intent/tweet?text=Read &quot;{{ .LinkTitle }} {{ with .Site.Params.twitter }}&quot; by @{{ . }}{{ end }} {{ .Permalink }}','_self')">
 		<button class="ui twitter button"><i class="twitter icon"></i>Tweet</button>
 	</div>
 </section>

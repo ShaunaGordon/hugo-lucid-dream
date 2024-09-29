@@ -33,6 +33,9 @@
         --linkText: #6aa3db;
         --blogCardText: #cdced3;
         --red: #924848;
+        --important: #c00a0a;
+        --caution: #f1ff34;
+        --info: #3761df;
     }
 }
 
@@ -61,6 +64,9 @@
         --linkText: #4183c4;
         --blogCardText: #ffffff;
         --red: #db2828;
+        --important: #c00a0a;
+        --caution: #f1ff34;
+        --info: #3761df;
     }
 }
 
@@ -395,6 +401,32 @@ ul>li {
         position: relative;
         max-width: 80%;
         display: block;
+    }
+}
+
+blockquote {
+    &.alert {
+        border-left-width: 3px;
+
+        &.alert-note {
+            border-left-color: var(--info);
+        }
+
+        &.alert-important {
+            border-left-color: var(--important);
+        }
+
+        &.alert-tip {
+            border-left-color: var(--info);
+        }
+
+        &.alert-caution {
+            border-left-color: var(--caution);
+        }
+
+        &.alert-warning {
+            border-left-color: var(--important);
+        }
     }
 }
 
