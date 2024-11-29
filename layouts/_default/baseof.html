@@ -24,5 +24,8 @@
 		{{ block "bodyEnd" . }}{{ end }}
 		{{ partial "init_body.html" . }}
 		{{ partial "twemoji.html" . }}
+		{{ if .Param "math" }}
+			{{ partialCached "math.html" . }}
+		{{ end }}
 	</body>
 </html>
